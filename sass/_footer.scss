@@ -1,0 +1,19 @@
+.footer{
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    //Posicionar o footer
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &_logo{
+        max-width: 100px;
+    }
+    
+    &_txt{
+        margin: auto;
+        @include fontSize(14px);
+    }
+}

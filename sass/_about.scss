@@ -1,0 +1,94 @@
+.about{
+    @include for-phone-only{
+        width: 90%;
+    }
+    width: 80%;
+    margin: 0 auto 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &_title{
+        background-color: $light-grey;
+        text-align: center;
+        padding: 20px;
+    }
+
+    &_h1{
+        font-size: 22px;
+        color: $dark-grey;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        @extend %default-margin-bottom;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .breadcrumb{
+        @include flx(justify-content, center);
+        align-items: center;
+
+        &_link{
+            font-size: 12px;
+            text-decoration: none;
+            color: $dark-grey;
+            
+            &:hover{
+                text-decoration: underline;
+                color: $purple;
+            }
+
+        }
+
+        &_img{
+            width: 10px;
+            margin: 8px;
+        }
+    }
+
+    &_img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &_intro{
+        font-weight: 100;
+        color: $dark-grey;
+        width: 70%;
+        margin: 30px auto;
+        text-align: center;
+        font-size: 16px;
+        @include for-phone-only{
+            width: 90%;
+        }
+        @include for-tablet-only{
+            width: 80%;
+        }
+    }
+
+
+    &_split{
+        @include flx(justify-content, center);
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &_img_description{
+        width: $img-width;
+        @include for-phone-only{
+            width: 80%;
+        }
+    }
+
+    &_txt{
+        width: calc(100% - #{ $img-width });
+        @include for-phone-only{
+            width: 90%;
+            text-align: center;
+        }
+    }
+
+    &_p{
+        font-size: 14px;
+        padding: 10px 20px;
+        color: $dark-grey;
+    }
+}
